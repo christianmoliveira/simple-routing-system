@@ -17,7 +17,7 @@ function load(string $controller, string $action)
       throw new Exception("O método {$action} não existe no controller {$controller}");
     }
   
-    $controllerInstance->$action();
+    $controllerInstance->$action((object) $_REQUEST);
   } catch(\Exception $e) {
     echo $e->getMessage();
   }
