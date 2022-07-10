@@ -2,11 +2,11 @@
 
 namespace app\controllers;
 
-class ContactController
+class ContactController extends Controller
 {
   public function index()
   {
-    var_dump('index do contact');
+    return self::view('contact');
   }
   
   public function store()
